@@ -4,6 +4,7 @@ profile:
   version: 1.1.0
   description: A generally-useful profile.
   extends: foundation:profiles/base.md
+  schema_version: 2
 
 session:
   orchestrator:
@@ -21,10 +22,11 @@ session:
 
 
 providers:
-  - module: provider-anthropic
-    source: git+https://github.com/microsoft/amplifier-module-provider-anthropic@main
+  - module: provider-openai
+    source: git+https://github.com/payneio/amplifier-module-provider-openai@main
     config:
       debug: true
+      base_url: http://vllm.cloud.payne.io/
 
 tools:
   - module: tool-web
@@ -72,9 +74,6 @@ hooks:
       max_auto_iterations: 10    # Max iterations before user check-in (default: 10)
       inject_role: system        # Role for injection: system|user (default: system)
 
-agents:
-  dirs:
-    - ./agents
 ---
 
 @foundation:context/shared/common-agent-base.md

@@ -47,6 +47,12 @@ ui:
 hooks:
   - module: hooks-logging
     source: git+https://github.com/microsoft/amplifier-module-hooks-logging@main
+  - module: hook-issue-auto-work
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/hook-issue-auto-work
+    config:
+      priority: 100
+      max_auto_iterations: 10
+      inject_role: system
 
 agents:
   dirs:

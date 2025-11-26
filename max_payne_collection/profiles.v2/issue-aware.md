@@ -1,23 +1,19 @@
 ---
 profile:
-  name: general
+  name: issue-aware
   version: 1.1.0
-  description: A generally-useful profile.
-  extends: foundation:profiles/base.md
+  description: Issue-aware profile with autonomous issue management
+  extends: base
+  schema_version: 2
 
 session:
   orchestrator:
     module: loop-streaming
-    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/amplifier-module-loop-streaming
+    source: git+https://github.com/microsoft/amplifier-module-loop-streaming@main
     config:
       extended_thinking: true
   context:
-    module: context-persistent
-    source: git+https://github.com/microsoft/amplifier-module-context-persistent@main
-    config:
-      max_tokens: 200000
-      compact_threshold: 0.9
-      auto_compact: true
+    module: context-simple
 
 
 providers:
@@ -33,6 +29,7 @@ tools:
     source: git+https://github.com/microsoft/amplifier-module-tool-search@main
   - module: tool-task
     source: git+https://github.com/microsoft/amplifier-module-tool-task@main
+
   - module: tool-filesystem
     source: git+https://github.com/microsoft/amplifier-module-tool-filesystem@main
   - module: tool-bash
@@ -51,30 +48,13 @@ ui:
 hooks:
   - module: hooks-logging
     source: git+https://github.com/microsoft/amplifier-module-hooks-logging@main
-  - module: hooks-approval
-    source: git+https://github.com/microsoft/amplifier-module-hooks-approval@main
-    config:
-      patterns:
-        - rm -rf
-        - sudo
-        - DELETE
-        - DROP
-      auto_approve: false
-  - module: hooks-backup
-    source: git+https://github.com/microsoft/amplifier-module-hooks-backup@main
-    config:
-      backup_dir: .amplifier/local/backups
-      max_backups: 10
   - module: hook-issue-auto-work
     source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/hook-issue-auto-work
     config:
-      priority: 100              # Run late to see full turn (default: 100)
-      max_auto_iterations: 10    # Max iterations before user check-in (default: 10)
-      inject_role: system        # Role for injection: system|user (default: system)
+      priority: 100
+      max_auto_iterations: 10
+      inject_role: system
 
-agents:
-  dirs:
-    - ./agents
 ---
 
 @foundation:context/shared/common-agent-base.md
