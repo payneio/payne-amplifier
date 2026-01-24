@@ -1,8 +1,0 @@
-bundle:
-  name: behavior-logging
-  version: 1.0.0
-  description: Session and event logging hooks
-
-hooks:
-  - module: hooks-logging
-    source: git+https://github.com/microsoft/amplifier-module-hooks-logging@main

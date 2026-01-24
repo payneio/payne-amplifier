@@ -8,9 +8,9 @@ includes:
   - bundle: git+https://github.com/microsoft/amplifier-foundation@main
   - bundle: payne-amplifier:behaviors/software-development
   - bundle: payne-amplifier:behaviors/web
-  - bundle: payne-amplifier:behaviors/logging
-  - bundle: payne-amplifier:behaviors/streaming-ui
-  - bundle: payne-amplifier:behaviors/redaction
+  - bundle: foundation:behaviors/logging
+  - bundle: foundation:behaviors/streaming-ui
+  - bundle: foundation:behaviors/redaction
 
 providers:
   - module: provider-anthropic

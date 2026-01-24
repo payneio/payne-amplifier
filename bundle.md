@@ -50,8 +50,10 @@ Reusable capability add-ons that can be composed into bundles:
 - **command-line** - Bash and filesystem tools
 - **task-management** - Todo and task tracking
 - **web** - Web browsing and search capabilities
-- **logging** - Session event logging
-- **streaming-ui** - Progressive display hooks
-- **redaction** - Sensitive data handling
 - **exploration** - Codebase exploration agent
 - **amplifier-expert** - Amplifier ecosystem consultant
+- **recipe-running** - Recipe execution support
+- **issue-management** - GitHub issue management
+- **timely** - Time-aware context
+
+Note: logging, streaming-ui, and redaction behaviors are provided by Foundation.

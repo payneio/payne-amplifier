@@ -1,8 +1,0 @@
-bundle:
-  name: behavior-streaming-ui
-  version: 1.0.0
-  description: Streaming UI hooks for progressive display
-
-hooks:
-  - module: hooks-streaming-ui
-    source: git+https://github.com/microsoft/amplifier-module-hooks-streaming-ui@main
