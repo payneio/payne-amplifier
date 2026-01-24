@@ -5,12 +5,15 @@ bundle:
   description: Development configuration with full toolset
 
 includes:
+  # Base capabilities (Foundation provides tools, hooks, agents)
   - bundle: git+https://github.com/microsoft/amplifier-foundation@main
-  - bundle: payne-amplifier:behaviors/software-development
+  # Additional behaviors (no instructions, order doesn't matter)
   - bundle: payne-amplifier:behaviors/web
   - bundle: foundation:behaviors/logging
   - bundle: foundation:behaviors/streaming-ui
   - bundle: foundation:behaviors/redaction
+  # Primary behavior LAST (its instruction wins via compose "later replaces earlier")
+  - bundle: payne-amplifier:behaviors/software-development
 
 providers:
   - module: provider-anthropic

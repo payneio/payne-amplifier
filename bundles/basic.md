@@ -5,13 +5,16 @@ bundle:
   description: Basic assistant configuration with core functionality
 
 includes:
+  # Base capabilities
   - bundle: git+https://github.com/microsoft/amplifier-foundation@main
+  # Additional behaviors
   - bundle: payne-amplifier:behaviors/command-line
   - bundle: payne-amplifier:behaviors/web
-  - bundle: payne-amplifier:behaviors/task-management
   - bundle: foundation:behaviors/logging
   - bundle: foundation:behaviors/streaming-ui
   - bundle: foundation:behaviors/redaction
+  # Primary behavior LAST (its instruction wins)
+  - bundle: payne-amplifier:behaviors/task-management
 
 providers:
   - module: provider-anthropic
