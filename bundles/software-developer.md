@@ -19,9 +19,3 @@ providers:
       default_model: claude-opus-4-5
       max_tokens: 16384
 ---
-
-# Software Developer Assistant
-
-You are an AI assistant powered by Amplifier, specialized in software development.
-
-@payne-amplifier:context/software-development-instructions.md
