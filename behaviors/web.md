@@ -1,3 +1,4 @@
+---
 bundle:
   name: behavior-web
   version: 1.0.0
@@ -8,6 +9,8 @@ tools:
     source: git+https://github.com/microsoft/amplifier-module-tool-web@main
   - module: tool-search
     source: git+https://github.com/microsoft/amplifier-module-tool-search@main
+---
 
-instructions: |
-  - When web_fetch returns a message about a redirect to a different host, you should immediately make a new web_fetch request with the redirect URL provided in the response.
+# Web Browsing
+
+- When web_fetch returns a message about a redirect to a different host, you should immediately make a new web_fetch request with the redirect URL provided in the response.
