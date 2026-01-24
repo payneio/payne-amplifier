@@ -1,0 +1,8 @@
+bundle:
+  name: behavior-amplifier-expert
+  version: 1.0.0
+  description: Authoritative consultant for the Amplifier ecosystem
+
+agents:
+  - module: amplifier-expert
+    source: git+https://github.com/microsoft/amplifier-module-agent-amplifier-expert@main

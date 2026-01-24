@@ -1,0 +1,8 @@
+bundle:
+  name: behavior-exploration
+  version: 1.0.0
+  description: Codebase and context exploration agent
+
+agents:
+  - module: explorer
+    source: git+https://github.com/microsoft/amplifier-module-agent-explorer@main

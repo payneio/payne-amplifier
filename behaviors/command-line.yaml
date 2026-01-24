@@ -1,0 +1,15 @@
+bundle:
+  name: behavior-command-line
+  version: 1.0.0
+  description: Command line interaction with bash tool
+
+includes:
+  - bundle: payne-amplifier:behaviors/filesystem
+
+tools:
+  - module: tool-bash
+    source: git+https://github.com/microsoft/amplifier-module-tool-bash@main
+
+instructions: |
+  - Use specialized tools instead of bash commands when possible. For file operations, use dedicated tools: read_file for reading files instead of cat/head/tail, edit_file for editing instead of sed/awk, and write_file for creating files instead of cat with heredoc or echo redirection. Reserve bash tools exclusively for actual system commands and terminal operations that require shell execution.
+  - NEVER use bash echo or other command-line tools to communicate thoughts, explanations, or instructions to the user. Output all communication directly in your response text.

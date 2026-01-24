@@ -1,7 +1,7 @@
 ---
 bundle:
   name: payne-amplifier
-  version: 1.0.0
+  version: 2.0.0
   description: Personal Amplifier bundles and extensions by Paul Payne
   sub_bundles:
     - name: software-developer
@@ -35,9 +35,23 @@ tools:
 
 # Payne Amplifier
 
-Personal Amplifier bundles and extensions.
+Personal Amplifier bundles and extensions by Paul Payne.
 
 ## Available Bundles
 
 - **software-developer** - Full development configuration with tools, hooks, and agents
 - **basic** - Minimal configuration for simple tasks
+
+## Behaviors
+
+Reusable capability add-ons that can be composed into bundles:
+
+- **software-development** - Full software development workflow with agents
+- **command-line** - Bash and filesystem tools
+- **task-management** - Todo and task tracking
+- **web** - Web browsing and search capabilities
+- **logging** - Session event logging
+- **streaming-ui** - Progressive display hooks
+- **redaction** - Sensitive data handling
+- **exploration** - Codebase exploration agent
+- **amplifier-expert** - Amplifier ecosystem consultant

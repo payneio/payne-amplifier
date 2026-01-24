@@ -1,0 +1,8 @@
+bundle:
+  name: behavior-issue-management
+  version: 1.0.0
+  description: Issue tracking and management capabilities
+
+tools:
+  - module: tool-task
+    source: git+https://github.com/microsoft/amplifier-module-tool-task@main

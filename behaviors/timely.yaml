@@ -1,0 +1,12 @@
+bundle:
+  name: behavior-timely
+  version: 1.0.0
+  description: Injects datetime into context
+
+hooks:
+  - module: hooks-status-context
+    source: git+https://github.com/microsoft/amplifier-module-hooks-status-context@main
+    config:
+      include_datetime: true
+      datetime_include_timezone: false
+      include_git: false

@@ -1,0 +1,7 @@
+bundle:
+  name: behavior-issues-auto-work
+  version: 1.0.0
+  description: Autonomous issue management with persistent tracking
+
+includes:
+  - bundle: payne-amplifier:behaviors/issue-management
