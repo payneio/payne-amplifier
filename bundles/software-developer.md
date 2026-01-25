@@ -7,7 +7,7 @@ bundle:
 
 includes:
   # Base capabilities (Foundation provides tools, hooks, agents)
-  - bundle: git+https://github.com/microsoft/amplifier-foundation@main
+  - bundle: git+https://github.com/payneio/amplifier-foundation@main
   # Additional behaviors
   - bundle: payne-amplifier:behaviors/web
   - bundle: foundation:behaviors/logging
