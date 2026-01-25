@@ -15,7 +15,7 @@ hooks:
     source: git+https://github.com/microsoft/amplifier-module-hooks-todo-reminder@main
 
 agents:
-  - module: post-task-cleanup
+  post-task-cleanup:
     source: git+https://github.com/microsoft/amplifier-module-agent-post-task-cleanup@main
 ---
 

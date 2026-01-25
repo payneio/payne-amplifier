@@ -21,21 +21,23 @@ hooks:
       include_git: true
 
 agents:
-  - module: bug-hunter
+  bug-hunter:
     source: git+https://github.com/microsoft/amplifier-module-agent-bug-hunter@main
-  - module: explorer
+  explorer:
     source: git+https://github.com/microsoft/amplifier-module-agent-explorer@main
-  - module: modular-builder
+  modular-builder:
     source: git+https://github.com/microsoft/amplifier-module-agent-modular-builder@main
-  - module: post-task-cleanup
+  post-task-cleanup:
     source: git+https://github.com/microsoft/amplifier-module-agent-post-task-cleanup@main
-  - module: zen-architect
+  zen-architect:
     source: git+https://github.com/microsoft/amplifier-module-agent-zen-architect@main
-  - module: researcher
+  researcher:
     source: git+https://github.com/microsoft/amplifier-module-agent-researcher@main
 ---
 
 # Software Development Instructions
+
+@payne-amplifier:context/software-development/software-development-base.md
 
 Key agents you should ALWAYS use:
 
